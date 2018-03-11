@@ -80,15 +80,7 @@ class ParkingLot
       end
     end
 
-    puts "\nOutput:"
-    
-    if data.empty?
-      puts "not found"
-    else
-      puts data.join(', ')
-    end
-
-    puts "\n"
+    output_data(data)
   end
 
   def slot_numbers_for_cars_with_colour_input(input)
@@ -100,15 +92,7 @@ class ParkingLot
       end
     end
     
-    puts "\nOutput:"
-    
-    if data.empty?
-      puts "not found"
-    else
-      puts data.join(', ')
-    end
-    
-    puts "\n"
+    output_data(data)
   end
 
   def slot_number_for_registration_number_input(input)
@@ -119,16 +103,8 @@ class ParkingLot
         data.push(lot.slot_no)
       end
     end
-    
-    puts "\nOutput:"
-    
-    if data.empty?
-      puts "not found"
-    else
-      puts data.join(', ')
-    end
-    
-    puts "\n"
+   
+    output_data(data)
   end
 
   def start
@@ -167,5 +143,19 @@ class ParkingLot
         puts "Wrong command\n\n"
       end
     end
+  end
+
+  private
+
+  def output_data(data)
+    puts "\nOutput:"
+    
+    if data.empty?
+      puts "not found"
+    else
+      puts data.join(', ')
+    end
+    
+    puts "\n"
   end
 end
